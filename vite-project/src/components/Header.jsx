@@ -14,8 +14,7 @@ export default function Header() {
                         <a className="link" >Специалисты</a>
                         <a className="link" >Процедуры</a>
                         <a className="link" >Средства</a>
-                        <a className="link" >ул.КарлаМаркса</a>
-                        <a className="btn_1" >запись</a>
+                        <Link className="link" to='/log'>Войти</Link>
                     </nav>
                 </div>
             </div>
