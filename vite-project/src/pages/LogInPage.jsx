@@ -5,7 +5,6 @@ export default function LogInPage() {
     return (
         <div className='wrapper'>
             <Header />
-            <Header/>
             <LogIn />
         </div>
     )

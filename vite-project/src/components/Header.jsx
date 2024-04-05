@@ -14,7 +14,15 @@ export default function Header() {
                         <a className="link" >Специалисты</a>
                         <a className="link" >Процедуры</a>
                         <a className="link" >Средства</a>
-                        <Link className="link" to='/log'>Войти</Link>
+                        {!user ? (
+                            <>
+                                <Link className="link" to='/log'>Войти</Link>
+                            </>
+                        ) : (
+                            <>
+                                <Link className='link' to='/home'>Home</Link>
+                            </>
+                        )}
                     </nav>
                 </div>
             </div>
