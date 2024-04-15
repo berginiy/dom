@@ -102,7 +102,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background: url("../img/Egp3ffWN_AY.jpg") center no-repeat;
+  background: url("./img/Egp3ffWN_AY.jpg") center no-repeat;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -186,6 +186,7 @@ p {
 }
 
 .section {
+  padding: 30px;
   margin-bottom: 40px;
   max-width: 950px;
   margin: 0 auto;
@@ -385,34 +386,6 @@ p {
   line-height: 140%;
   margin-top: 180px;
 }
-
-.skelet {
-  margin: 30px;
-  width: 1300px;
-}
-
-.head_skelet {
-  display: flex;
-  justify-content: space-between;
-}
-
-.skelet_title {
-  color: var(--accent, #D3B288);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-
-.skelet_icons {
-  margin-top: 60px;
-}
-
-.skelet_img {
-  display: flex;
-  justify-content: space-between;
-}
-
 
 .hub {
   width: 1518px;
@@ -644,21 +617,6 @@ li {
   margin-right: 16px;
 }
 
-.change_btn {
-  background-color: #5a529c;
-  transition: all 0.1s ease;
-  color: #fff;
-  border: 0px;
-  border-radius: 5px;
-  height: 30px;
-}
-
-.change_btn:hover {
-  transform: scale(1.05);
-  background-color: #3d348b;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -678,25 +636,58 @@ li {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.userChangeAvatar,
+.userChangeInfo {
+  margin-bottom: 20px;
+}
+
+.change_btn {
+  background-color: #5a529c;
+  transition: all 0.1s ease;
+  color: #fff;
+  border: 0px;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.change_btn:hover {
+  transform: scale(1.05);
+  background-color: #3d348b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mod_back_btn {
+  margin-left: 10px;
+}
+
+.mod_img {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
   margin-bottom: 10px;
 }
 
-.modal-header h2 {
-  margin: 0;
+.mod_form {
+  display: flex;
+  flex-direction: column;
 }
 
-.close-btn {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 20px;
-  color: #999;
+.mod_form div {
+  margin-bottom: 10px;
 }
 
-.close-btn:hover {
-  color: #666;
+.mod_form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mod_form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.mod_form .submit {
+  width: fit-content;
 }
