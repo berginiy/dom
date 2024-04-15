@@ -413,10 +413,11 @@ p {
   justify-content: space-between;
 }
 
+
 .hub {
-  background: var(--accent, #D3B288);
   width: 1518px;
   height: 465px;
+  margin: 0 auto;
 }
 
 .hub_title {
@@ -634,10 +635,68 @@ li {
 
 .final_square {
   margin-top: 135px;
+  background: var(--accent, #D3B288);
 }
 
 .img_two {
   width: 306px;
   height: 258px;
   margin-right: 16px;
+}
+
+.change_btn {
+  background-color: #5a529c;
+  transition: all 0.1s ease;
+  color: #fff;
+  border: 0px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.change_btn:hover {
+  transform: scale(1.05);
+  background-color: #3d348b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #666;
 }

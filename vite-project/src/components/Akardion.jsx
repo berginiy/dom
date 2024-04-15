@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Akardion() {
-
     return (
         <div className="boss">
             <div className="akard">

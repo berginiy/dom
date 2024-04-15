@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Altynbek from '../img/123123.jpg'
 
 export default function Bird() {
 
@@ -8,7 +9,7 @@ export default function Bird() {
                 <div className="about">
                     <div className="about_item">
                         <div className="about_img">
-                            <img src="C:/Users/ProBook/Pictures/Fligma/src/img/unsplash_xayCTz6N2nM.png" alt="About" />
+                            <img alt="About" />
                         </div>
                     </div>
                 </div>

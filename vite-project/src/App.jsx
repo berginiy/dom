@@ -1,22 +1,33 @@
-import Routers from "./app/Routers"
+import Routers from '@/app/Routers'
+import '@/App.css'
 import { createContext, useState, useEffect } from 'react'
 import axios from 'axios'
 
 export const UserContext = createContext()
 export const UserInfo = createContext()
+export const ModalContext = createContext()
+export const ModalStatus = createContext()
 
 export default function App() {
 
-  const [user, setUser] = useState(false)
+  const [user, setUser] = useState(true)
   const [userInfo, setUserInfo] = useState({
 
   })
+  const [visible, setVisible] = useState(false)
+  const [status, setStatus] = useState('userAvatar')
 
   useEffect(() => {
     if (localStorage.getItem('access_token')) {
       checkUser(localStorage.getItem('access_token'))
     }
   }, [])
+
+  useEffect(() => {
+    if (localStorage.getItem('access_token')) {
+      checkUser(localStorage.getItem('access_token'))
+    }
+  }, [user])
 
   async function checkUser(access) {
     const access_token = localStorage.getItem('access_token')
@@ -40,9 +51,13 @@ export default function App() {
 
   return (
     <UserContext.Provider value={[user, setUser]}>
-      <UserInfo.Provider value={[userInfo, setUserInfo]}>
-        <Routers />
-      </UserInfo.Provider>
+      <ModalContext.Provider value={[visible, setVisible]}>
+        <ModalStatus.Provider value={[status, setStatus]}>
+          <UserInfo.Provider value={[userInfo, setUserInfo]}>
+            <Routers />
+          </UserInfo.Provider>
+        </ModalStatus.Provider>
+      </ModalContext.Provider>
     </UserContext.Provider>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from '../pages/MainPage';
-import RegInPage from '../pages/RegInPage'
-import ErrorPage from '../pages/ErrorPage'
-import LogInPage from '../pages/LogInPage'
+import MainPage from '@/pages/MainPage';
+import RegInPage from '@/pages/RegInPage'
+import ErrorPage from '@/pages/ErrorPage'
+import LogInPage from '@/pages/LogInPage'
+import ProfilePage from '@/pages/ProfilePafe';
 
 const Routers = () => {
     return (
@@ -13,6 +14,7 @@ const Routers = () => {
                 <Route path="/reg" element={<RegInPage />} />
                 <Route path="/log" element={<LogInPage />} />
                 <Route path="*" element={<ErrorPage />} />
+                <Route path='/home' element={<ProfilePage/>}/>
             </Routes>
         </BrowserRouter>
     );
